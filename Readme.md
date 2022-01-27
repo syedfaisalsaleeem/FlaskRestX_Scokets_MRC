@@ -29,7 +29,7 @@ To get started using this package follow the instructions below.
     "province":"Sindh"
 }
 `
-- Get User added with this endpoint `http://localhost:5000/user`
+- Get All the Users added with this endpoint with GET REQUEST `http://localhost:5000/user`
 
 ### CREATE A USER WITH ROLE
 - SEND POST REQUEST on this endpoint `http://localhost:5000/user_roles/register` WITH JSON Payload
@@ -56,7 +56,7 @@ It will return the authorization bearer token
     }
 }`
 
-- check whether this user can access the url
+### check whether this user can access the url
  - Create a get request with authorization bearer token 
 curl --location --request GET 'http://127.0.0.1:5000/test_roles/testadmin' \
 --header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0MzI4NjI4MywianRpIjoiZjZmMmE2N2MtZWI3OC00Mzc3LThhZTAtODAxOGMxYTc3MTQ3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MTMsIm5iZiI6MTY0MzI4NjI4MywiZXhwIjoxNjQzMjg3MTgzfQ.8HE3Io1dEjM0m3mYiLKklayT1wwAu3t4kl1IAyK7q1U'
@@ -74,7 +74,7 @@ Use postman to test the socket connection
 - http://localhost:5000 send a socket connection request
 - `{"room":"1"}` send message to createrooms event to create room
 -  `{"room":"1","username":"faisal"}` send message to join event to user join room which will be broadcasted
-- `{"room":"1","username":"faisal"}` send message to leave event to leave join room
+- `{"room":"1","username":"faisal"}` send message to leave event to leave room
 
 ### Google APIS
 - update .env file to load api key
