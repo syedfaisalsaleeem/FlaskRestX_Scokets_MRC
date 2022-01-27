@@ -9,7 +9,7 @@ def test_message():
     print('[INFO] Web client connected: ')
 
 
-@sk.on('createrooms')
+@sk.on('disconnect')
 def test_disconnect():
     print("----client disconnected ---")
 
