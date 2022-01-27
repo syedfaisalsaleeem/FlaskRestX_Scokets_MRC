@@ -85,3 +85,9 @@ Use postman to test the socket connection
 if server is not starting go to this address to empty the port
 for using only ip address at a time
 https://stackoverflow.com/questions/12362542/python-server-only-one-usage-of-each-socket-address-is-normally-permitted
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## Authors
+- Syed Faisal Saleem 
