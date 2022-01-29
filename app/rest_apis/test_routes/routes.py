@@ -13,7 +13,7 @@ class AdminRoute(Resource):
         data = User.query.filter(User.id==current_user).first()
         for values in data.roles:
             if  "admin" != values.name:
-                return {"status":False,"message":"Only Admin can access"},400
+                return {"status":False,"message":"Only Admin can access Unauthorized"},403
             else:
                 return {"status":True,"message":"You have successfully accessed"},200
 
@@ -26,6 +26,6 @@ class AdminRoute(Resource):
         data = User.query.filter(User.id==current_user).first()
         for values in data.roles:
             if  "employees" != values.name:
-                return {"status":False,"message":"Only Employees can access"},400
+                return {"status":False,"message":"Only Employees can access Unauthorized"},403
             else:
                 return {"status":True,"message":"You have successfully accessed"},200
